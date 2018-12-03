@@ -6,5 +6,7 @@ let o: String? = "o"
 var world: String! = nil
 world = " world!"
 
-//let helloWorld: String
-//print(helloWorld)
+if let hwrap = h, let owrap = o {
+    let helloWorld = hwrap + ell + owrap + world
+    print(helloWorld)
+}
