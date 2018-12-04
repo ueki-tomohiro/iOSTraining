@@ -11,7 +11,8 @@ import UIKit
 class SecondViewController: UIViewController {
 
     private struct Const {
-        static let ojisanInitialFrame = CGRect(x: 85, y: 115, width: 170, height: 170)
+        static let ojisanInitialFrame = CGRect(x: 65, y: 115, width: 170, height: 170)
+        static let ojisanInitialFrame2 = CGRect(x: 215, y: 115, width: 170, height: 170)
     }
     
     let ojisanImageView1 = UIImageView(image: UIImage(named: "ojisan"))
@@ -22,10 +23,15 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // TODO: ojisanImageView1の追加
+         view.addSubview(ojisanImageView1)
+        ojisanImageView1.frame = Const.ojisanInitialFrame
         
         // TODO: ojisanImageView2の追加
-        
+        view.addSubview(ojisanImageView2)
+        ojisanImageView2.frame = Const.ojisanInitialFrame2
+
         // TODO: ojisanImageView2を非表示にしておく
+        ojisanImageView2.isHidden = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
