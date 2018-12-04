@@ -30,7 +30,8 @@ class ViewController: UIViewController, SecondViewControllerDelegate {
     
     @IBAction func thirdButtonTapped(_ sender: UIButton) {
         //performSegue(withIdentifier: "presentSecondViewController", sender: self)
-        guard let secondViewController = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {
+        guard let storyboard = storyboard,
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {
             return
         }
         secondViewController.delegate = self

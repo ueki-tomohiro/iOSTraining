@@ -10,18 +10,32 @@ class User {
     var gender:Gender
     var era:Int
     var age:Int
-    var visits:Array<Int>? = nil
+    var visits:[Int]? = nil
     
-    init?(dict: [String : Any?]) {
-        name = dict["name"] as! String
-        gender = dict["gender"] as! Int == 1 ? Gender.man : Gender.female
-        era = dict["era"] as! Int
-        age = dict["age"] as! Int
+    init? (dict: [String : Any?]) {
+        guard let name = dict["name"] as? String,
+        let era = dict["era"] as? Int,
+        let age = dict["age"] as? Int,
+        let gender = dict["gender"] as? Int else {
+            return nil
+        }
+        self.name = name
+        self.era = era
+        self.age = age
+        self.gender = gender == 1 ? Gender.man : Gender.female
+    
+        if let visits = dict["visits"] as? [Int] {
+            self.visits = visits
+        }
+    }
+    
+    func print() {
+        Swift.print(name)
+        Swift.print(era)
+        Swift.print(age)
         
-        if let v = dict["visits"] {
-            if v != nil {
-                self.visits = v as! Array<Int>?
-            }
+        if let visits = visits {
+            Swift.print(visits)
         }
     }
 }
@@ -59,19 +73,13 @@ let dict: [String : [[String : Any?]]] = [
 var users: [User] = []
 
 if let userDict = dict["users"] {
-    for i in 0 ..< userDict.count  {
-        users.append(User(dict: userDict[i])!)
+    for dict in userDict  {
+        if let user = User(dict: dict) {
+            users.append(user)
+        }
     }
 }
 
-for i in 0 ..< users.count {
-    let user = users[i]
-    
-    print(user.name)
-    print(user.era)
-    print(user.age)
-    
-    if let visits = user.visits {
-        print(visits)
-    }
+for user in users {
+    user.print()
 }

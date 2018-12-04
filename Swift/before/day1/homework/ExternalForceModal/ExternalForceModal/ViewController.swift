@@ -33,8 +33,9 @@ class ViewController: UIViewController, SecondViewControllerDelegate {
     }
     
     private func showSecondViewController() {
-        guard let secondViewController = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {
-        return
+        guard let storyboard = storyboard,
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {
+            return
         }
         // TODO: secondViewControllerのdelegateを自分にセット
         secondViewController.delegate = self
