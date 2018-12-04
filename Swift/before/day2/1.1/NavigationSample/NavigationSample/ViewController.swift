@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +19,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func nextButtonTapped(_ sender:UIButton) {
+        guard let titleLabel = sender.titleLabel, let titleText = titleLabel.text else {
+            return
+        }
+        
+        guard let storyboard = storyboard, let navigationController = navigationController else {
+            return
+        }
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "NextViewController") as? NextViewController else {
+            return
+        }
+        viewController.setTitle(title: titleText)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 

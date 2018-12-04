@@ -19,7 +19,6 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +30,14 @@ class FirstViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // TODO: アニメーション追加
+        // Do any additional setup after loading the view, typically from a nib.
+        UIView.animate(withDuration: 2, animations: {  [weak self] in
+            self?.ojisanImageView.frame = Const.ojisanMovedFrame
+        } , completion: { _ in
+            UIView.animate(withDuration: 2, animations: { [weak self] in
+                self?.ojisanImageView.frame = Const.ojisanInitialFrame
+            } , completion:nil)
+        })
     }
 }
 
