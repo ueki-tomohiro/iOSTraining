@@ -19,7 +19,7 @@ class NextViewController: UIViewController {
     
     func setTitle(title:String) {
         self.title = title
-        label?.text = String(format: " %@ Tapped", title)
+        label?.text = " \(title) Tapped"
     }
     /*
     // MARK: - Navigation

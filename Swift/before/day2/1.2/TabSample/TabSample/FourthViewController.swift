@@ -10,7 +10,7 @@ import UIKit
 
 class FourthViewController: UIViewController {
     init(imageName: String) {
-        super.init(nibName: "FourthViewController", bundle: nil)
+        super.init(nibName: nil, bundle: nil)
         if let tabBarItem = tabBarItem {
             tabBarItem.title = "Fourth"
             tabBarItem.image = UIImage(named: imageName)

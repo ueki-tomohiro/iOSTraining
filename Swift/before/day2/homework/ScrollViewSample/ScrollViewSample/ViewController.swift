@@ -64,7 +64,7 @@ extension ViewController: UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(String(format:"x:%f, y:%f", scrollView.contentOffset.x, scrollView.contentOffset.y))
+        print("x:\(scrollView.contentOffset.x), y:\(scrollView.contentOffset.y)")
     }
     
     func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {

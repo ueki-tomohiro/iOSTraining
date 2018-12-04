@@ -11,14 +11,8 @@ import UIKit
 class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        guard let navigationController = navigationController else {
-            return
-        }
-        title = String(navigationController.childViewControllers.count)
+        title = String(navigationController?.childViewControllers.count ?? 0)
     }
-    
 
     /*
     // MARK: - Navigation
