@@ -11,14 +11,13 @@ import UIKit
 // TODO:
 // delegateのためのプロトコルを定義
 protocol SecondViewControllerDelegate: class {
-    
-// ここにDelegateメソッドの定義
-    
+   func secondViewController(_ viewController: SecondViewController, didTapButton button: UIButton)
 }
 
 class SecondViewController: UIViewController {
 
     // TODO: delegate変数の用意
+     weak var delegate: SecondViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,5 +34,6 @@ class SecondViewController: UIViewController {
         // TODO:
         // ボタンがタップされた時に呼ばれるメソッド
         // delegateを介してモーダルを消す
+        delegate?.secondViewController(self, didTapButton: sender)
     }
 }

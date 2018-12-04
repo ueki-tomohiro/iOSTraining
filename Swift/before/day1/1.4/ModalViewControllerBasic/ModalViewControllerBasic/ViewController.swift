@@ -8,27 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SecondViewControllerDelegate {
     
-    let sampleVC = SampleViewController(nibName: "SampleViewController", bundle: nil)
+    // TODO: プロパティの追加
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        view.addSubview(sampleVC.view)
-        sampleVC.view.translatesAutoresizingMaskIntoConstraints = false
-        let constraints: [NSLayoutConstraint] = [.top, .left, .right, .bottom].map {
-            NSLayoutConstraint(item: sampleVC.view, attribute: $0, relatedBy: .equal, toItem: view, attribute: $0, multiplier: 1, constant: 0)
-        }
-        view.addConstraints(constraints)
+        // TODO: MixiSampleViewControllerの追加
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func secondButtonTapped(_ sender:UIButton) {
+        performSegue(withIdentifier: "presentSecondViewController", sender: self)
+    }
+    
+    @IBAction func thirdButtonTapped(_ sender: UIButton) {
+        //performSegue(withIdentifier: "presentSecondViewController", sender: self)
+        guard let storyboard = storyboard,
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {
+            return
+        }
+        secondViewController.delegate = self
+        present(secondViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindToSampleViewController(segue: UIStoryboardSegue) {
+        // segue実行時にここが実行される
+    }
+    
+    func secondViewController(_ viewController: SecondViewController, didTapButton button: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 

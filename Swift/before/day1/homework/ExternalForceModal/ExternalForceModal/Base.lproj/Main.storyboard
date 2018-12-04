@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,6 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEK-5w-Zpr">
+                                <rect key="frame" x="146" y="318.5" width="83" height="30"/>
                                 <state key="normal" title="show modal"/>
                                 <connections>
                                     <action selector="showTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X0I-Ad-xC2"/>
@@ -38,7 +42,7 @@
         <!--Second View Controller-->
         <scene sceneID="bdU-mv-zt5">
             <objects>
-                <viewController id="Nuf-Cj-VcB" customClass="SecondViewController" customModule="ExternalForceModal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="Nuf-Cj-VcB" customClass="SecondViewController" customModule="ExternalForceModal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L9J-ZV-L4s"/>
                         <viewControllerLayoutGuide type="bottom" id="5VA-99-SWf"/>
@@ -48,6 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYk-k2-gp8">
+                                <rect key="frame" x="146" y="318.5" width="83" height="30"/>
                                 <state key="normal" title="close modal"/>
                                 <connections>
                                     <action selector="closeTapped:" destination="Nuf-Cj-VcB" eventType="touchUpInside" id="7si-Xm-kYP"/>

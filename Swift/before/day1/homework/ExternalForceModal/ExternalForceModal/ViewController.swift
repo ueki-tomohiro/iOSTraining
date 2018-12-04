@@ -9,7 +9,7 @@
 import UIKit
 
 // TODO: SecondViewControllerのdelegateを準拠する
-class ViewController: UIViewController {
+class ViewController: UIViewController, SecondViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showTapped(_ sender: UIButton) {
-        let secondViewController = SecondViewController(nibName: "SecondViewController", bundle: nil)
-        // TODO: secondViewControllerのdelegateを自分にセット
-        // TODO: present(viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
+        self.showSecondViewController()
     }
 
     // TODO: SecondViewController の delegateメソッドを実装
+    func secondViewController(_ viewController: SecondViewController, didTapButton button: UIButton) {
+        dismiss(animated: true) {
+            self.showSecondViewController()
+        }
+    }
+    
+    private func showSecondViewController() {
+        guard let storyboard = storyboard,
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {
+            return
+        }
+        // TODO: secondViewControllerのdelegateを自分にセット
+        secondViewController.delegate = self
+        // TODO: present(viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
+        present(secondViewController, animated: true, completion: nil)
+    }
 }
 
