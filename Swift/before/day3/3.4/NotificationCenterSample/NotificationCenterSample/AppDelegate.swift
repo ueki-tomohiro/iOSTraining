@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  WebViewSample
+//  NotificationCenterSample
 //
-//  Created by 鈴木大貴 on 2016/10/30.
-//  Copyright © 2016年 marty-suzuki. All rights reserved.
+//  Created by 植木 友浩 on 2018/12/05.
+//  Copyright © 2018 CyberZ. All rights reserved.
 //
 
 import UIKit
