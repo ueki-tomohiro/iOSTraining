@@ -13,10 +13,10 @@ import RxSwift
 import SwiftyJSON
 
 class GithubService {
-    enum sortOption : String {
-        case STARS = "stars"
-        case FORKS = "forks"
-        case UPDATED = "updated"
+    enum SORT : String {
+        case stars
+        case forks
+        case updated
     }
     
     enum APIError: Error {
@@ -28,7 +28,7 @@ class GithubService {
     
     private init(){}
     
-    func getUser(q:String, sort:sortOption) -> Single<[GithubRepository]> {
+    func getUser(q:String, sort:SORT) -> Single<[GithubRepository]> {
         return Single<[GithubRepository]>.create{ observer in
             let url = "https://api.github.com/search/repositories"
             let parameters: Parameters = [

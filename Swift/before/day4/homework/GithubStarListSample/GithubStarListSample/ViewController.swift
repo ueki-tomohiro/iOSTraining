@@ -45,16 +45,16 @@ class ViewController: UIViewController {
         activityIndicator.startAnimating()
         
         //TODO: - 該当のURLからJSONを取得する
-        GithubService.shared.getUser(q: "language swift", sort:.STARS).subscribe(
-            onSuccess: { [unowned self] entity in
+        GithubService.shared.getUser(q: "language swift", sort:.stars).subscribe(
+            onSuccess: { [weak self] entity in
                 //TODO: - 取得したJSONらGithubRepositoryの配列を生成し、repositoriesに代入
-                self.stopIndicator()
-                self.updateRepository(items:entity)
+                self?.stopIndicator()
+                self?.updateRepository(items:entity)
             },
-            onError: { [unowned self] error in
+            onError: { [weak self] error in
                 //TODO: - 取得に失敗した場合は、エラーのアラートを出す
-                self.stopIndicator()
-                self.showError(error:error)
+                self?.stopIndicator()
+                self?.showError(error:error)
             }
         ).disposed(by: disposeBag)
     }
