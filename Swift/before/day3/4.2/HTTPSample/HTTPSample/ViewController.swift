@@ -33,7 +33,34 @@ class ViewController: UIViewController {
             let encodedUsername = username.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
             let url = URL(string: "https://qiita.com/api/v2/users/\(encodedUsername)")
         else { return }
-        //TODO: 通信を実行、完了白太textView.textに結果を代入して表示
+        //TODO: 通信を実行、完了次第textView.textに結果を代入して表示
+        let request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data else { return }
+            var loaded = false
+            do {
+                let user = try JSONDecoder().decode(User.self, from: data)
+                DispatchQueue.main.async { [weak self] in
+                    self?.textView.textColor = .black
+                    self?.textView.text = "id = \(user.id), name = \(user.name)"
+                }
+                loaded = true
+            } catch let e {
+                print(e)
+            }
+            if loaded == false {
+                do {
+                    let error = try JSONDecoder().decode(ErrorModel.self, from:data)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.textView.textColor = .red
+                        self?.textView.text = "type = \(error.type), message = \(error.message)"
+                    }
+                } catch let e {
+                    print(e)
+                }
+            }
+        }
+        task.resume()
     }
 }
 

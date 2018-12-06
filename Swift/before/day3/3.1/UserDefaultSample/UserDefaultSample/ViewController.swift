@@ -32,6 +32,9 @@ class ViewController: UIViewController {
     
     @IBAction func readSettingButtonTapped(_ sender: UIButton) {
         // TODO: Setting Bundleで設定したtextFieldの値を取得
+        if let child = UserDefaults.standard.object(forKey: "child_name") {
+            print(child)
+        }
     }
 }
 
