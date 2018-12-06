@@ -19,9 +19,6 @@ class GithubTableViewCell: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-    static let descriptionLabelSpaces = UIEdgeInsets(top: 72, left: 12, bottom: 97, right: 12)
-    static let defaultHeight: CGFloat = 187
-    
     @IBOutlet weak var repositoryNameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -32,11 +29,6 @@ class GithubTableViewCell: UITableViewCell {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var updatedLabel: UILabel!
     @IBOutlet weak var descriptionLabelHeightConstraint: NSLayoutConstraint!
-    
-    class func height(of repository: GithubRepository, with maxSize: CGSize) -> CGFloat {
-        //TODO: 高さ計算のロジック
-        return 0
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,5 +52,16 @@ class GithubTableViewCell: UITableViewCell {
     
     func configure(with repository: GithubRepository) {
         //TODO: - セルの内容設定
+        repositoryNameLabel.text = repository.name
+        userNameLabel.text = repository.owner.login
+        descriptionLabel.text = repository.description
+        starsCountLabel.text = String(repository.stargazersCount)
+        forksCountLabel.text = String(repository.forksCount)
+        watchersCountLabel.text = String(repository.watchersCount)
+        createdLabel.text = repository.createdAt.YYYYMMddString()
+        updatedLabel.text = repository.updatedAt.YYYYMMddString()
+        
+        setImage(with: repository.owner.avatarUrl)
+        
     }
 }

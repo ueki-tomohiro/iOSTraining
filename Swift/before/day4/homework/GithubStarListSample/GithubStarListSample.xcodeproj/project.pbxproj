@@ -16,14 +16,16 @@
 		9D714D841DCDC0CE00736336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D714D821DCDC0CE00736336 /* LaunchScreen.storyboard */; };
 		9D714D8C1DCDC15900736336 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9D714D8B1DCDC15900736336 /* Cartfile */; };
 		9D714D901DCDC21700736336 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D714D8E1DCDC21700736336 /* Alamofire.framework */; };
-		9D714D911DCDC21700736336 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D714D8F1DCDC21700736336 /* SwiftyJSON.framework */; };
 		9D714D951DCDC2AE00736336 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714D941DCDC2AE00736336 /* APIClient.swift */; };
-		9D714D9C1DCDC58900736336 /* GithubEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714D9B1DCDC58900736336 /* GithubEntity.swift */; };
 		9D714D9E1DCDC5CC00736336 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714D9D1DCDC5CC00736336 /* GithubRepository.swift */; };
 		9D714DA11DCDD1CE00736336 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714DA01DCDD1CE00736336 /* Date+Format.swift */; };
 		9D714DA51DCDD38E00736336 /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714DA31DCDD38E00736336 /* GithubTableViewCell.swift */; };
 		9D714DA61DCDD38E00736336 /* GithubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D714DA41DCDD38E00736336 /* GithubTableViewCell.xib */; };
 		9D714DA81DCDDEF600736336 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D714DA71DCDDEF600736336 /* Kingfisher.framework */; };
+		E16EB39B21B8A5AE0067C31A /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16EB39A21B8A5AE0067C31A /* GithubService.swift */; };
+		E16EB39D21B8A7C40067C31A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16EB39C21B8A7C40067C31A /* RxSwift.framework */; };
+		E16EB39F21B8BDA20067C31A /* GithubEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16EB39E21B8BDA10067C31A /* GithubEntity.swift */; };
+		E16EB3A121B8BDED0067C31A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16EB3A021B8BDED0067C31A /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +40,16 @@
 		9D714D851DCDC0CE00736336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D714D8B1DCDC15900736336 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		9D714D8E1DCDC21700736336 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		9D714D8F1DCDC21700736336 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		9D714D941DCDC2AE00736336 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		9D714D9B1DCDC58900736336 /* GithubEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubEntity.swift; sourceTree = "<group>"; };
 		9D714D9D1DCDC5CC00736336 /* GithubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		9D714DA01DCDD1CE00736336 /* Date+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		9D714DA31DCDD38E00736336 /* GithubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubTableViewCell.swift; sourceTree = "<group>"; };
 		9D714DA41DCDD38E00736336 /* GithubTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GithubTableViewCell.xib; sourceTree = "<group>"; };
 		9D714DA71DCDDEF600736336 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		E16EB39A21B8A5AE0067C31A /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		E16EB39C21B8A7C40067C31A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E16EB39E21B8BDA10067C31A /* GithubEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubEntity.swift; sourceTree = "<group>"; };
+		E16EB3A021B8BDED0067C31A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16EB3A121B8BDED0067C31A /* SwiftyJSON.framework in Frameworks */,
+				E16EB39D21B8A7C40067C31A /* RxSwift.framework in Frameworks */,
 				9D714DA81DCDDEF600736336 /* Kingfisher.framework in Frameworks */,
 				9D714D901DCDC21700736336 /* Alamofire.framework in Frameworks */,
-				9D714D911DCDC21700736336 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 		9D714D781DCDC0CE00736336 /* GithubStarListSample */ = {
 			isa = PBXGroup;
 			children = (
+				E16EB39921B8A57B0067C31A /* Service */,
 				9D714D791DCDC0CE00736336 /* AppDelegate.swift */,
 				9D714D7B1DCDC0CE00736336 /* ViewController.swift */,
 				9D714D7D1DCDC0CE00736336 /* Main.storyboard */,
@@ -100,9 +106,10 @@
 		9D714D8D1DCDC21700736336 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E16EB3A021B8BDED0067C31A /* SwiftyJSON.framework */,
+				E16EB39C21B8A7C40067C31A /* RxSwift.framework */,
 				9D714DA71DCDDEF600736336 /* Kingfisher.framework */,
 				9D714D8E1DCDC21700736336 /* Alamofire.framework */,
-				9D714D8F1DCDC21700736336 /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,7 +125,7 @@
 		9D714D9A1DCDC57200736336 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9D714D9B1DCDC58900736336 /* GithubEntity.swift */,
+				E16EB39E21B8BDA10067C31A /* GithubEntity.swift */,
 				9D714D9D1DCDC5CC00736336 /* GithubRepository.swift */,
 				9D3CE0661DCF00800002F030 /* GithubUser.swift */,
 			);
@@ -141,6 +148,14 @@
 				9D714DA41DCDD38E00736336 /* GithubTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E16EB39921B8A57B0067C31A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E16EB39A21B8A5AE0067C31A /* GithubService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +186,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "szk-atmosphere";
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Cyber-Z";
 				TargetAttributes = {
 					9D714D751DCDC0CE00736336 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -221,14 +237,15 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -240,11 +257,12 @@
 				9D714D7C1DCDC0CE00736336 /* ViewController.swift in Sources */,
 				9D3CE0671DCF00800002F030 /* GithubUser.swift in Sources */,
 				9D714D7A1DCDC0CE00736336 /* AppDelegate.swift in Sources */,
-				9D714D9C1DCDC58900736336 /* GithubEntity.swift in Sources */,
+				E16EB39F21B8BDA20067C31A /* GithubEntity.swift in Sources */,
 				9D714D9E1DCDC5CC00736336 /* GithubRepository.swift in Sources */,
 				9D714DA51DCDD38E00736336 /* GithubTableViewCell.swift in Sources */,
 				9D714DA11DCDD1CE00736336 /* Date+Format.swift in Sources */,
 				37C232361DF4393E007FA7BA /* UIAlertController+Retry.swift in Sources */,
+				E16EB39B21B8A5AE0067C31A /* GithubService.swift in Sources */,
 				9D714D951DCDC2AE00736336 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,15 +298,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -329,15 +356,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -369,12 +405,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GithubStarListSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.GithubStarListSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -385,12 +424,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GithubStarListSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.GithubStarListSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
