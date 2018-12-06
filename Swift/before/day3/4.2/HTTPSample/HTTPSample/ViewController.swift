@@ -37,30 +37,27 @@ class ViewController: UIViewController {
         let request = URLRequest(url: url)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
+            var loaded = false
             do {
-                let object = try JSONSerialization.jsonObject(with: data, options: [])
-                print(object)
-                guard let hashTable = object as? [String: Any] else {
-                    return
+                let user = try JSONDecoder().decode(User.self, from: data)
+                DispatchQueue.main.async { [weak self] in
+                    self?.textView.textColor = .black
+                    self?.textView.text = "id = \(user.id), name = \(user.name)"
                 }
-                if let id = hashTable["id"] as? String,
-                    let name = hashTable["name"] as? String {
-                    DispatchQueue.main.async { [unowned self] in
-                        self.textView.textColor = .black
-                        self.textView.text = "id = \(id), name = \(name)"
-                    }
-                } else {
-                    guard let message = hashTable["message"] as? String,
-                    let type = hashTable["type"] as? String else {
-                        return
-                    }
-                    DispatchQueue.main.async { [unowned self] in
-                        self.textView.textColor = .red
-                        self.textView.text = "type = \(type), message = \(message)"
-                    }
-                }
+                loaded = true
             } catch let e {
                 print(e)
+            }
+            if loaded == false {
+                do {
+                    let error = try JSONDecoder().decode(ErrorModel.self, from:data)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.textView.textColor = .red
+                        self?.textView.text = "type = \(error.type), message = \(error.message)"
+                    }
+                } catch let e {
+                    print(e)
+                }
             }
         }
         task.resume()

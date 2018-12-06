@@ -11,6 +11,10 @@ import UIKit
 class SecondViewController: UIViewController {
     @IBOutlet weak var receiveText: UILabel!
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
