@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JDA-lh-Rqs">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JDA-lh-Rqs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KzU-zq-nqR">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="0.52128775167785235" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JDA-lh-Rqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cxa-Np-3Vn"/>
-                            <constraint firstItem="JDA-lh-Rqs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GIS-Kw-Xtg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JDA-lh-Rqs" secondAttribute="bottom" id="RIt-LI-Wh1"/>
+                            <constraint firstItem="JDA-lh-Rqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KwT-CA-Bmt"/>
+                            <constraint firstItem="JDA-lh-Rqs" firstAttribute="centerX" secondItem="KzU-zq-nqR" secondAttribute="centerX" id="S3g-6Y-Nd0"/>
                             <constraint firstItem="KzU-zq-nqR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TQf-sj-LeQ"/>
-                            <constraint firstAttribute="trailing" secondItem="JDA-lh-Rqs" secondAttribute="trailing" id="eOl-kl-g7t"/>
+                            <constraint firstItem="JDA-lh-Rqs" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="vob-cJ-ViE"/>
+                            <constraint firstItem="JDA-lh-Rqs" firstAttribute="centerY" secondItem="KzU-zq-nqR" secondAttribute="centerY" id="x7Y-Rp-Sqo"/>
                             <constraint firstItem="KzU-zq-nqR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yd8-hz-KHM"/>
                         </constraints>
                     </view>

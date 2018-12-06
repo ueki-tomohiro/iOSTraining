@@ -11,3 +11,8 @@ xcuserdata
 */Carthage/Checkouts
 */Carthage/Build/*
 */Carthage/Build
+
+## Carthage
+
+Carthage/
+Cartfile.resolved
